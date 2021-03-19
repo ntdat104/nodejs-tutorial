@@ -12,7 +12,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 //TODO Routes
-app.use("/post", postRoutes);
+app.use("/api/posts", postRoutes);
 
 //TODO Homepage
 app.get("/", (req, res) => res.send("Homepage!"));
