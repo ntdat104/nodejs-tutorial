@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:3000/api
+
+### @name getAllPosts
+GET {{baseUrl}}/posts
+
+### @name getSpecificPost
+GET {{baseUrl}}/posts/0ed63b06-d55e-4c70-93ce-469c5bcf6747
+
+### @name createNewPost
+POST {{baseUrl}}/posts
+Content-Type: application/json
+
+{
+    "title": "Bài đăng mới",
+    "content": "Bài đăng không có nội dung"
+}
+
+### @name deletePost
+DELETE {{baseUrl}}/posts/cc12b17f-062b-47c7-94a0-7050037562a8
+
+### @name updatePost
+PATCH {{baseUrl}}/posts/b7e40975-7ca2-4b22-8666-04f3bd0989d6
+Content-Type: application/json
+
+{
+    "title": "x",
+    "content": "Cập nhật nội dung mới"
+}
+
