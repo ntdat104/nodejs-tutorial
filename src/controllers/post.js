@@ -15,13 +15,13 @@ function writeDB(value) {
 const POSTS = readDB();
 
 module.exports.getAllPosts = (req, res) => {
-    res.json(POSTS);
+    res.status(200).json(POSTS);
 };
 
 module.exports.getPost = (req, res) => {
     const { id } = req.params;
     const postSearch = POSTS.find((post) => post.id == id);
-    res.json(postSearch);
+    res.status(200).json(postSearch);
 };
 
 module.exports.createPost = (req, res) => {
@@ -35,7 +35,7 @@ module.exports.createPost = (req, res) => {
     };
     const newPOSTS = [...POSTS, post];
     writeDB(newPOSTS);
-    res.json(post);
+    res.status(201).json(post);
 };
 
 module.exports.deletePost = (req, res) => {
